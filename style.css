@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Dirt&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --primary: #0568a3;
+    --black: #333333;
+    --width-break: 600px;
+}
+
+body {
+    margin: 0;
+    font-family: 'Rubik Dirt', cursive;
+    color: #333333;
+}
+
+nav {
+    background-color: var(--primary);
+    text-align: center;
+    color: white;
+}
+
+#img-div {
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+}
+
+main {
+    padding: 1rem;
+    max-width: var(--width-break);
+}
+
+textarea {
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    min-height: 20vh;
+    margin-top: 2rem;
+    font-size: large;
+    font-family: inherit;
+    padding: 1rem;
+}
+
+button {
+    background-color: var(--primary);
+    border: none;
+    margin: 1rem 0rem;
+    padding: 1rem 2rem;
+    font-family: 'Rubik Dirt', cursive;
+    font-size: large;
+    color: white;
+    border-radius: 5px;
+}
+
+#translate-output {
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 10vh;
+    max-height: 20vh;
+    overflow: scroll;
+    border: 1px solid var(--black);
+    padding: 1rem;
+    margin-bottom: 3rem;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 1rem;
+    background-color: var(--primary);
+    text-align: center;
+    color: white;
+}
+
+footer p {
+    max-width: var(--width-break);
+    margin: auto;
+}
+
+.grid-container {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(2, calc(50% - 20px));
+}
+
+@media screen and (max-width: 480px) {
+
+    .grid-container {
+        display: block;
+        grid-template-columns: repeat(1);
+    }
+
+    footer {
+        position: relative;
+    }
+
+}
